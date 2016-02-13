@@ -1,0 +1,14 @@
+/.yo-rc.json
+
+/.editorconfig
+
+/.eslintrc
+
+/test
+
+/.npmignore
+markdown-replace-section-*.tgz
+
+/.babelrc
+
+/src
