@@ -2,15 +2,17 @@
 
 import stdin from "stdin";
 import yargs from "yargs";
-import {readFileSync} from "fs";
+import {readFileSync, writeFileSync} from "fs";
 
 import replaceSection from ".";
 
 const argv = yargs
   .usage(
-`Usage: $0 <input_file> <heading_name> [--not-hungry]
+`Usage: $0 <input_file> <heading_name> [<output_file>] [--not-hungry]
 
-Reads the Markdown file <input_file> and replaces everything between the first heading named <heading_name> and the next heading of the same level in the file with the content read from stdin. The result is written to stdout.
+Reads the Markdown file <input_file> and replaces everything between the first heading named <heading_name> and the next heading of the same level in the file with the content read from stdin.
+
+The result is written to <output_file> or stdout.
 `
   )
   .boolean("not-hungry")
@@ -22,12 +24,20 @@ Reads the Markdown file <input_file> and replaces everything between the first h
   .version()
   .argv;
 
-const documentPath = argv._[0];
-const document = readFileSync(documentPath, { encoding: "utf8" });
+const inputPath = argv._[0];
+const input = readFileSync(inputPath, { encoding: "utf8" });
 
 const headingName = argv._[1];
 const hungry = !argv.notHungry;
 
+const outputPath = argv._[2];
+
 stdin(replacement => {
-  process.stdout.write(replaceSection(document, headingName, replacement.trim(), hungry));
+  const output = replaceSection(input, headingName, replacement.trim(), hungry);
+
+  if (outputPath) {
+    writeFileSync(outputPath, output);
+  } else {
+    process.stdout.write(output);
+  }
 });
