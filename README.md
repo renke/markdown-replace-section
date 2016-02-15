@@ -45,7 +45,7 @@ Other title
 Some other content
 ```
 
-The package also comes with a executable `markdown-replace-section` for usage in shell scripts
+The package also comes with an executable `markdown-replace-section` for usage in shell scripts
 
 ```
 Usage: src/cli.js <input_file> <heading_name> [<output_file>] [--not-hungry]
