@@ -30,7 +30,7 @@
   "repository": "renke/markdown-replace-section",
   "license": "ISC",
   "name": "markdown-replace-section",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Replace a section in a Markdown file with different content",
   "private": false,
   "author": {
