@@ -30,11 +30,19 @@
   "license": "ISC",
   "name": "markdown-replace-section",
   "version": "0.0.0",
-  "description": "markdown-replace-section",
+  "description": "Replace a section in a Markdown file with different content",
   "private": true,
   "author": {
     "name": "Renke Grunwald",
     "email": "renke@renke.org"
   },
-  "main": "lib"
+  "main": "lib",
+  "dependencies": {
+    "remark": "^4.0.0",
+    "stdin": "0.0.1",
+    "yargs": "^4.1.0"
+  },
+  "bin": {
+    "markdown-replace-section": "./lib/cli.js"
+  }
 }
