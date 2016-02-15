@@ -38,6 +38,7 @@
   },
   "main": "lib",
   "dependencies": {
+    "babel-runtime": "^6.5.0",
     "remark": "^4.0.0",
     "stdin": "0.0.1",
     "yargs": "^4.1.0"
