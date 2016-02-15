@@ -31,7 +31,7 @@
   "name": "markdown-replace-section",
   "version": "0.0.0",
   "description": "Replace a section in a Markdown file with different content",
-  "private": true,
+  "private": false,
   "author": {
     "name": "Renke Grunwald",
     "email": "renke@renke.org"
