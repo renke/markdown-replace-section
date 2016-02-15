@@ -5,6 +5,7 @@
   ],
   "plugins": [
     "transform-decorators-legacy",
-    "transform-runtime"
+    "transform-runtime",
+    "add-module-exports"
   ]
 }
