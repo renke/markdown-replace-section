@@ -1,3 +1,5 @@
+__ATTENTION: This repository is currently unmaintained.__
+
 # markdown-replace-section
 
 Replace a section in a Markdown file with different content.
